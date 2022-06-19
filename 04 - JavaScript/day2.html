@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <head>
+        <title>Day 2</title>
+        <script>
+            var challenge = '30 Days of JavaScript' 
+            var companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'        //1
+            var sentence = 'You cannot end a sentence with because because because is a conjunction'
+            var phrase = '30 Days of '
+            console.log('challenge = ' + challenge)         //2
+            console.log('length of challenge: ' + challenge.length)
+            console.log('challenge in uppercase: ' + challenge.toUpperCase())
+            console.log('challenge in lowercase: ' + challenge.toLowerCase())
+            console.log('first word of challenge sliced: ' + challenge.substring(3,7))
+            console.log('phrase of challenge sliced: ' + challenge.slice(3))
+            console.log('includes the word Script? ' + challenge.includes('Script'))
+            console.log('splitting string into array: ' + challenge.split(''))
+            console.log('splitting string into array at spaces: ' + challenge.split(' '))
+            console.log('splitting string into array at comma: ' + companies.split(','))
+            console.log('replacing word in string: ' + challenge.replace('JavaScript', 'Python'))
+            console.log('character at index 15: ' + challenge.charAt(15))
+            console.log('character code of J: ' + challenge.charCodeAt('11'))
+            console.log('First index of a: ' + challenge.indexOf('a'))
+            console.log('Last index of a: ' + challenge.lastIndexOf('a'))
+            console.log('First occurence of because: ' + sentence.indexOf('because'))
+            console.log('Last occurrence of because: ' + sentence.lastIndexOf('because'))
+            console.log('First occurrence of because using search: ' + sentence.search('because'))            
+            console.log('trim challenge: ' + challenge.trim())
+            console.log('starts with 30? ' + challenge.startsWith('30'))
+            console.log('ends with JavaScript? ' + challenge.endsWith('JavaScript'))
+            console.log('all a\'s in challenge: ' + challenge.match('a'))
+            console.log('using concat: ' + phrase.concat('JavaScript'))
+            console.log('repeat challenge twice: ' + challenge.repeat(2))
+            let quote = 'There is no exercise better for the heart than reaching down and lifting people up.'
+            console.log(quote)
+            let quote2 = 'Love is not patronizing and charity isn\'t about pity, it is about love. Charity and love are the same -- with charity you give love, so don\'t just give money but reach out your hand instead.'
+            console.log(quote2)
+
+            console.log('type of 10: ' + typeof(10))
+            console.log('type of \'10\': ' + typeof('10'))
+            console.log(parseFloat('9.8'))
+            let pyt = 'python'
+            let jar = 'jargon'
+            console.log('Is on present is python and jargon: ' + pyt.includes('on') + ' and ' + jar.includes('on'))
+            let sentence1 = 'I hope this course is not full of jargon.'
+            console.log('Does sentence contain jargon? ' + sentence1.includes('jargon'))
+            console.log("Random number between 1 to 100: " + Math.floor((Math.random() * 100) + 1))
+            console.log("Random number between 50 to 100: " + Math.floor((Math.random() * 51) + 50))
+            console.log("Random number between 0 to 255: " + Math.floor((Math.floor(Math.random() * 256) + 0 )))
+            let s = 'JavaScript'
+            console.log('Accessing random characters from string:' + s.charAt(Math.floor((Math.floor(Math.random() * 11) + 0 ))))
+            var matrix = '1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125'
+            console.log(matrix)
+            console.log('slicing sentence: ' + sentence.substr(30, 24))
+            let sentence2 = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+            newArr = sentence2.split(' ')
+            let lenSentence = newArr.length
+            console.log('Number of words in sentence: ' + lenSentence)
+            console.log('Number of because in sentence: ' + sentence.match('because'))
+        
+
+
+        </script>
+    </head>
+    <body>
+        Day 2
+        <br>
+        Open console log to see the output.
+    </body>
+</html>

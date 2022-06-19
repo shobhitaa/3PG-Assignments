@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>Day 22: Exercise 1</title>
+</head>
+
+<body>
+
+    <script>
+        
+        let body = document.querySelector('body');
+        body.style.fontFamily = 'Roboto, open-sans, sans-serif';
+        
+        let h1 = document.createElement('h1');
+
+        h1.style.textAlign = 'center';
+        h1.style.fontWeight = 'bold';
+        h1.style.fontSize = '40px';
+        h1.style.margin = '10px auto';
+        h1.textContent = "Number Generator"
+
+        let h2 = document.createElement('h2');
+
+        h2.style.textAlign = 'center';
+        h2.style.textDecoration = 'underline';
+        h2.style.fontWeight = '500';
+        h2.style.fontSize = '25px';
+        h2.style.margin = '1px auto';
+        h2.textContent = "30DaysOfJavaScript: DOM Day 2"
+
+        let h3 = document.createElement('h3');
+
+        h3.style.textAlign = 'center';
+        h3.style.textDecoration = 'underline';
+        h3.style.fontWeight = '300';
+        h3.style.marginTop = '2px';
+        h3.textContent = "Author: Antonio José Romera Alfonso"
+
+
+        let div = document.createElement('div');
+
+        div.style.display = 'flex';
+        div.style.flexWrap = 'wrap';
+        div.style.justifyContent = 'center';
+        div.style.margin = '0 auto';
+        div.style.width = '1000px'
+
+
+        document.body.appendChild(h1)
+        document.body.appendChild(h2)
+        document.body.appendChild(h3)
+        document.body.appendChild(div)
+
+        function isPrime(n){
+            if (n <= 1)
+                return false;
+        
+            // Check from 2 to square root of n
+            for (let i = 2; i <= Math.sqrt(n); i++)
+                if (n % i == 0)
+                    return false;
+        
+            return true;    
+        }
+        
+        let box
+        for (let i = 0; i < 100; i++) {
+            box = document.createElement('div')
+            
+            box.style.fontSize = '24px'
+            box.textContent = Math.floor(Math.random() * 100)
+            const num = box.textContent
+            box.style.color = 'white';
+            box.style.fontSize = '45px';
+            box.style.width = '170px';
+            box.style.height = '90px';
+            box.style.margin = '3px';
+            box.style.lineHeight = '90px';
+            box.style.textAlign = 'center';
+            if (num % 2 != 0){
+                box.style.backgroundColor = '#FD5E53';
+            }
+            else {
+                box.style.backgroundColor = '#21BF73';
+            }
+            console.log(num + isPrime(num))
+            if (isPrime(num)){
+                box.style.backgroundColor = '#FDDB3A';
+            }
+            
+            div.appendChild(box)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+    <head>
+        <title>Day 7: Functions</title>
+        <script>
+            function fullName(){
+                console.log("Shobhitaa Barik")
+            }
+            
+
+            function fullName(firstName, lastName){
+                console.log(firstName + " " + lastName)
+            }
+            fullName("Shobhitaa", "Barik")
+
+            function add(a, b) {
+                return a + b;
+            }
+            console.log(add(6, 7));
+
+            
+            function areaOfRectangle(length, width) {
+                let area = length * width;
+                return area;
+            }
+            console.log(areaOfRectangle(3, 4));
+
+            function perimeterOfRectangle(length, width){
+                let perimeter = 2 * (length + width);
+                return perimeter;
+            }
+            console.log(perimeterOfRectangle(2, 6));
+
+            function volumeOfRectangularPrism(length, width, height){
+                let volume = length * width * height;
+                return volume;
+            }
+            console.log(volumeOfRectangularPrism(1, 3, 5));
+
+            function AreaOfCircle(radius){
+                const PI = 3.14;
+                let area = PI * radius * radius;
+            }
+            console.log(AreaOfCircle(7));
+
+            function circumOfCircle(r){
+                const PI = 3.14;
+                return 2 * PI * r
+            }
+            console.log(circumOfCircle(7));
+
+            function density(mass, volume){
+                return mass * volume;
+            }
+            console.log(density(2, 3));
+
+            function speed(d, t){
+                return d / t;
+            }
+            console.log(speed(10, 2))
+
+            function weight(mass, gravity){
+                return mass * gravity;
+            }
+            console.log(weight(3, 6))
+
+            function convertCelsiusToFahrenheit(celsius){
+                let fahrenheit = (celsius * 9 / 5) + 32
+                return fahrenheit;
+            }
+            console.log(convertCelsiusToFahrenheit(5));
+            
+            
+            function Bmi(weight, height){
+                let bmi = weight / (height * height);
+                if (bmi < 18.5) {
+                    return "underweight";
+                } else if (bmi > 18.5 && bmi < 24.9) {
+                    return "overweight";
+                } else if (bmi > 25 && bmi < 29.9) {
+                    return "overweight";
+                } else {
+                    return "obese";
+                }
+            }
+            console.log(Bmi(56, 2));
+
+            function checkSeasons(month){
+                switch (month) {
+                    case "september":
+                    case "october":
+                    case "November":
+                        console.log("Autumn");
+                        break;
+                    case "december":
+                    case "january":
+                    case "febuary":
+                        console.log("Winter");
+                        break;
+                    case "march":
+                    case "april":
+                    case "may":
+                        console.log("Spring");
+                        break;
+                    case "june":
+                    case "july":
+                    case "august":
+                        console.log("Summer");
+                        break;
+                    default:
+                        console.log("invalid input")
+                }
+            }
+            console.log(checkSeasons("may"));
+
+            function findMax(a, b, c){
+                if(a > b && a > c)
+                    return a;
+                else if (b > a && b > c)
+                    return b;
+                else return c;
+            }
+
+            console.log(findMax(5,19,9))
+
+            //Exercises: Level 2
+
+            myArray = [1,2,3,4,5]
+
+            function printArray(array){
+                for (i of array){
+                    console.log(i);
+                }
+            }
+
+            printArray(myArray)
+
+            myDate = new Date();
+
+            function showDateTime(date){
+                console.log(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes())
+            }
+
+            showDateTime(myDate)
+
+
+
+            swapValues = (a, b) => {
+                let x = b;
+                let y = a;
+                console.log(x, y);
+            }
+            swapValues(3, 4) // x => 4, y=>3
+            swapValues(4, 5) // x = 5, y = 4
+
+            reverseArray = (arr) => {
+            let start = 0, end = arr.length - 1
+            while (start < end)
+            {
+                let temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+                console.log(arr);
+            }
+            reverseArray([1, 2, 3, 4, 5])
+            
+            reverseArray(['A', 'B', 'C'])
+
+
+            capitalize = (arr) => {
+                for(let i = 0 ; i < arr.length; i++){
+                    arr[i] = arr[i].toUpperCase();
+                }
+                return arr;
+            }
+            console.log(capitalize(["oh", "Well"]))
+
+            addItem = (item) => {
+                let array = [];
+                array.push(item);
+                return console.log(array);
+            }
+            addItem('hi');
+
+            removeItem = (index) => {
+                let array = ['F', 'G', 'H', 'I'];
+                array.splice(index, 1);
+                return console.log(array);
+            }
+            removeItem(2);
+
+            function sumOfNumbers(nums) {
+                let sum = 0;
+                for (num of nums) {
+                    sum += num;
+                }
+
+                return console.log(sum);
+            }
+            sumOfNumbers([1, 2, 3, 4]);
+
+            function sumOfOdds(nums) {
+                let oddSum = 0;
+                for (num of nums) {
+                    if (num % 2 !== 0) {
+                        oddSum += num;
+                    }
+                }
+                
+                return console.log(oddSum);
+            }
+            sumOfOdds([1, 2, 3, 4]); 
+
+            function sumOfEven(nums) {
+                let evenSum = 0;
+
+                for (num of nums) {
+                    if (num % 2 === 0) {
+                        evenSum += num;
+                    }
+                }
+
+                return console.log(evenSum);
+            }
+            sumOfEven([1, 2, 3, 4]); // 2 + 4 = 6
+
+
+            function evensAndOdds(num) {
+                let even = 0;
+                let odd = 0;
+
+                for (let i = 0; i <= num; i++) {
+                    if (i % 2 === 0) {
+                        even++;
+                    } else if (i % 2 !== 0) {
+                        odd++;
+                    }
+                }
+
+                return console.log(`The number of odds are ${odd} and the number of evens are ${even}`);
+            }
+            evensAndOdds(100);
+
+            function sum(...nums) {
+            let sum = 0;
+
+            for (num of nums) {
+                sum += num;
+            }
+
+            return console.log(sum);
+            }
+            sum(1, 2, 3, 4, 5)
+
+            function randomUserIp() {
+            let a = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            let c = Math.floor(Math.random() * 255);
+            let d = Math.floor(Math.random() * 255);
+            return console.log(`IP: ${a}:${b}:${c}:${d}`);
+            }
+            randomUserIp();
+
+            function randomMacAddress() {
+            let hex = "0123456789ABCDEF";
+            let macAddress = "";
+            for (let i = 0; i < 6; i++) {
+                macAddress += hex.charAt(Math.floor(Math.random() * hex.length));
+                macAddress += hex.charAt(Math.floor(Math.random() *  hex.length));
+                if (i != 5) {
+                    macAddress += ":"
+                };
+            }
+
+            return console.log(`Mac address: ${macAddress}`);
+            }
+            randomMacAddress();
+            
+            function randomHexaNumberGenerator() {
+                let chars = "0123456789ABCDEF";
+                let hex = "";
+                for (let i = 0; i < 6; i++) {
+                    hex += chars[Math.floor(Math.random() * chars.length)];
+                }
+
+                return console.log(`#${hex}`);
+            }
+            randomHexaNumberGenerator();
+
+            function userIdGenerator() {
+                let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+                let userId = "";
+                for (let i = 0; i < 7; i++) {
+                    userId += chars[Math.floor(Math.random() * chars.length)];
+                }
+                return console.log(userId);
+            }
+            userIdGenerator();
+
+            //Exercises: Level 3
+            function userIdGenerator1() {
+                let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+                let userId = "";
+                a = Number(prompt("number of characters: "))
+                b = Number(prompt("number of user id: "))
+                idArr = []
+                for(let j = 0; j < b; j++){
+                    let userId = "";
+                for (let i = 0; i < a; i++) {
+                    userId += chars[Math.floor(Math.random() * chars.length)];
+                }
+                idArr.push(userId)
+                }
+                console.log(idArr);
+            }
+            userIdGenerator1();
+
+            function rgbColorGenerator(){
+                a = Math.floor(Math.random() *255)
+                b = Math.floor(Math.random() *255)
+                c = Math.floor(Math.random() *255)
+                console.log(`rgb(${a},${b},${c})`)
+            }
+            rgbColorGenerator()
+
+        </script>
+    </head>
+    <body>
+        Open console log to see the output.
+    </body>
+</html>

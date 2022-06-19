@@ -1,0 +1,75 @@
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Montserrat';
+}
+
+.box1{
+    border: 1px grey;
+    border-style: solid;
+    line-height: 150px;
+    height: 150px;
+    width: 200px;
+    margin-right: 50px;
+}
+
+.box2{
+    border: 1px grey;
+    border-style: solid;
+    margin-right: 50px;
+    line-height: 150px;
+    height: 150px;
+    width: 200px;
+}
+
+.box3{
+    border: 1px grey;
+    border-style: solid;
+    line-height: 150px;
+    height: 150px;
+    width: 200px;
+    margin-right: 50px;   
+}
+
+.box1:hover{
+    background-color: #F3E9E2;
+}
+.box2:hover{
+    background-color: #F3E9E2;
+}
+.box3:hover{
+    background-color: #F3E9E2;
+}
+
+.pinkBox{
+    height: 50px;
+    line-height: 50px;
+}
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+
+#sequence span {
+    animation: change_opacity 1.5s infinite alternate;
+  }
+  
+  @keyframes change_opacity {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  #jobs span {
+    animation: change_opacity 1.5s infinite alternate;
+  }
+  
+  @keyframes change_opacity {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }

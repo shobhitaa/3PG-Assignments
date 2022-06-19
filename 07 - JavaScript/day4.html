@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+    <title>Day 4</title>
+    <script>
+        // //Exercises level 1
+        let age = Number(prompt("Enter your age:"));
+        if (age > 18) 
+        {
+            console.log("You are old enough to drive.")
+        } 
+        else 
+        {
+            console.log('You are left with ' + 18 - age + ' years to drive.')
+        }
+        const myAge = 20
+        let yourAge = Number(prompt("Enter your age:"));
+        if (myAge > yourAge) {
+            console.log("I'm older than you by " + myAge - yourAge + "years.")
+        } 
+        else if (myAge == yourAge)
+        {
+            console.log("We are of the same age.")
+        }
+        else 
+        {
+            console.log("you are " + yourAge - myAge + " years older than me.")
+        }
+        let a = 4
+        let b = 3
+        if (a > b) {
+            console.log(a + " is greater than " + b);
+        } 
+        else 
+        {
+            console.log(b + " is greater than " + a);
+        }
+        console.log((a > b)?(a + " is greater than " + b):(b + " is greater than " + a))
+        
+        let n = Number(prompt("Enter a number: "))
+        if (n % 2 === 0) {
+            console.log(n + " is an even number")
+        } else {
+            console.log(n + " is an odd number")
+        }
+
+        // //Exercises: Level 2
+        let marks = Number(prompt("Enter the marks: "));
+        switch (true) {
+        case marks > 80:
+        console.log("A");
+        break;
+        case marks > 70:
+        console.log("B");
+        break;
+        case marks > 60:
+        console.log("C");
+        break;
+        case marks > 50:
+        console.log("D");
+        break;
+        case (marks < 50):
+        console.log("F");
+        break;
+        default:
+        console.log("Marks not given.")
+        }
+        
+        let month = prompt("Enter a month: ");
+        switch (month) {
+            case "september":
+            case "october":
+            case "November":
+            console.log("Autumn");
+            break;
+            case "december":
+            case "january":
+            case "febuary":
+            console.log("Winter");
+            break;
+            case "march":
+            case "april":
+            case "may":
+            console.log("Spring");
+            break;
+            case "june":
+            case "july":
+            case "august":
+            console.log("Summer");
+            break;
+            default:
+            console.log("invalid Month")
+        }
+
+        let day = prompt("Enter a day: ")
+        day = day.toLowerCase()
+        switch(day){
+            case "monday":
+            case "tuesday":
+            case "wednesday":
+            case "thrusday":
+            case "friday":
+                console.log(day + " is a working day.")
+                break;
+            case "saturday":
+            case "sunday":
+                console.log(day + " is a weekend.")
+                break;
+            default:
+                console.log("Day not entered.")
+        }
+        //Exercises: Level 3
+        let m = prompt("Enter a month: ");
+        switch (m) {
+        case "january":
+        case "march":
+        case "may":
+        case "july":
+        case "august":
+        case "october":
+        case "december":
+            console.log(m + " has 31 days")
+            break;
+        case "april":
+        case "june":
+        case "september":
+        case "november":
+        console.log(m + " has 30 days")
+        break;
+        case "february":
+        console.log(m + " has 28 days")
+        break;
+        default:
+        console.log("not valid");
+        }
+
+        let y = Number(prompt("Enter a year: "))
+        switch (m) {
+        case "january":
+        case "march":
+        case "may":
+        case "july":
+        case "august":
+        case "october":
+        case "december":
+            console.log(m + " has 31 days")
+            break;
+        case "april":
+        case "june":
+        case "september":
+        case "november":
+        console.log(m + " has 30 days")
+        break;
+        case "february":
+            if((y % 4 == 0) && (!(y % 100 == 0) || (y % 400 == 0))){
+                console.log(m + " has 29 days")
+            }
+            else {
+                console.log(m + " has 28 days")
+            }
+        break;
+        default:
+        console.log("not valid");
+        }
+    </script>
+</head>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Day 5</title>
+    <script>
+        arr1 = []
+        console.log(arr1)
+        arr2 = new Array('a', 'b', 'c', 'd', 'e')
+
+        console.log(arr2)
+        console.log(arr2.length)
+        console.log(arr2[0])
+        console.log(arr2[arr2.length - 1])
+        console.log(arr2[arr2.length / 2])
+        mixedDataTypes = (true, "abc", 3, false, 8.7, 'xyz')
+        console.log(mixedDataTypes.length)
+        itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+        console.log(itCompanies)
+        console.log(itCompanies.length)
+        console.log(itCompanies[0])
+        console.log(itCompanies[itCompanies.length - 1])
+        console.log(itCompanies[itCompanies.length / 2])
+        itCompanies.forEach(element => {
+            console.log(element)
+        });
+        for (let i = 0; i < itCompanies.length; i++) {
+            itCompanies[i] = itCompanies[i].toUpperCase();
+        }
+        itCompanies.forEach(element => {
+            console.log(element)
+        });
+        console.log(itCompanies.join() + " are big IT companies.")
+        console.log(itCompanies)
+        console.log(itCompanies.includes("FACEBOOK")?"FACEBOOK":"not found")
+        compCopy = itCompanies.slice()
+        //to find the name of companies containing more than two 'o'
+        for(let i = 0; i < itCompanies.length; i++){
+            flag = (compCopy[i]).includes('O')?true : false;
+            if (!flag) continue; 
+            indexO = compCopy[i].indexOf('O')
+            lIndexO = compCopy[i].lastIndexOf('O')
+            if(indexO > 0 && lIndexO > 0 && (indexO != lIndexO))
+                console.log(compCopy[i])
+        }
+        itCompanies.sort()
+        itCompanies.reverse()
+        console.log(itCompanies)
+        console.log(itCompanies.slice(0,3))
+        console.log(itCompanies.slice(-3))
+        console.log(itCompanies.slice(Math.floor(itCompanies.length / 2), Math.floor(itCompanies.length / 2) + 1))
+        console.log(compCopy)
+        compCopy.shift()
+        compCopy.splice(compCopy.length / 2, 1,)
+        compCopy.pop()
+        console.log(compCopy)
+        compCopy = []
+        
+
+    </script>
+</head>
+</html>

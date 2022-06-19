@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>Day 3</title>
+    <script>
+        var firstName = 'Shobha', lastName = 'Bar', country = 'France', city = 'Paris', age = 21, isMarried = true, year = 2022
+        console.log('type of firstName:' + typeof(firstName))
+        console.log('type of lastName:' + typeof(lastName)) 
+        console.log('type of country:' + typeof(country)) 
+        console.log('type of city:' + typeof(city)) 
+        console.log('type of age:' + typeof(age)) 
+        console.log('type of isMarried:' + typeof(isMarried)) 
+        console.log('type of year:' + typeof(year))
+        console.log('type of \'10\' is equal to 10? ' + (typeof('10') == typeof(10)))
+        console.log('parseInt(\'9.8\') is equal to 10? ' + (parseInt('9.8') == 10))
+        var a = 1, b = 2, c = 3, d = 4
+        console.log('let a = 1, b = 2, c = 3, d = 4')
+        console.log('(c > a) && (b < d) = ' + ((c > a) && (b < d)))
+        console.log('(d >= a) || (b > c) = ' + ((d >= a) || (b > c)))
+        console.log('(d) != (c) = ' + ((d) != (c)))
+        console.log('(c <= b) && (a < b) = ' + ((c <= b) && (a < b)))
+        console.log('(a == b) || (b > d) = ' + ((a == b) || (b > d)))
+        console.log('(c) != 3 = ' + ((c) != (3)))
+        console.log(4 > 3 && 10 < 12)
+        console.log(4 > 3 && 10 > 12)
+        console.log(4 > 3 || 10 < 12)
+        console.log(4 > 3 || 10 > 12)
+        console.log(!(4 > 3))
+        console.log(!(4 < 3))
+        console.log(!(false))
+        console.log(!(4 > 3 && 10 < 12))
+        console.log(!(4 > 3 && 10 > 12))
+        console.log(!(4 === '4'))
+        console.log(!('dragon'.includes('on') && 'python'.includes('on')))
+        let date = new Date();
+        console.log(date.getFullYear())
+        console.log(date.getMonth())
+        console.log(date.getDate())
+        console.log(date.getDay())
+        console.log(date.getHours())
+        console.log(date.getTime() / 1000)
+        
+        let base = prompt('Enter base of triangle')
+        let height = prompt('Enter height of triangle')
+        console.log('Area of triangle is: ' + 0.5 * base * height)
+
+        let s1 = parseInt(prompt('Enter side a of triangle'))
+        let s2 = parseInt(prompt('Enter side b of triangle'))
+        let s3 = parseInt(prompt('Enter side c of triangle'))
+    
+        console.log('Perimeter of triangle: ' + (s1 + s2 + s3))
+        
+        
+    </script>
+</head>
+<body>
+    Day 3 <br>
+    Open console log to see the output.
+</body>
+</html>
